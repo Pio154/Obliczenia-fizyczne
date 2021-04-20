@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Wzory fizyczne</title>
+</head>
+
+<body>
+    <script>
+        function ru()
+        {
+            var Vp = document.getElementById("vp").value;
+            var Vk = document.getElementById("vk").value;
+            var zV = Vk - Vp;
+            var t = document.getElementById("t").value;
+            var s = document.getElementById("s").value;
+            var a = zV / t;
+            var V1 = s / t;
+
+            document.write("Dany obiekt, w ruchu jednostajnie prostoliniowym, osiąga prędkość: " + V1 + " m/s")
+            document.write("<br>")
+            document.write("Przyśpieszenie wynosi:" + " " + a + " m/s^2")
+            document.write("<br>")
+
+
+        }
+    </script>
+
+
+    <div>
+        <center>
+            <table>
+                <tr>
+                    <td>
+                        Podawaj samę liczby, zgodnie z jednostkami w nawiasach!<br>
+                        Podaj Prędkość początkową (m/s) <input type="text" id="vp"><br>
+                        Podaj Prędkość końcową (m/s) <input type="text" id="vk"><br>
+                        Podaj czas ruchu (s) <input type="text" id="t"><br>
+                        Podaj drogę (m) <input type="text" id="s">
+                    </td>
+                
+                    <td>
+                        <button onclick="ru()"><b>Oblicz</b></button>
+                    </td>
+                </tr>
+            </table>
+        <a href=index.html>Powrót do menu</a>    
+        </center>
+    </div>
+</body>
+</html>
