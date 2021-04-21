@@ -8,53 +8,8 @@
 </head>
 
 <body>
-    <center>
-        <button onclick="s()"><h1>START</h1></button>
-    </center>
-    <script>
-        function s()
-        {
-            document.body.innerHTML = "";
-            document.write("<center>")
-            document.write("m (metry)<input type=\"text\" id=\"mkm\"> -> km (kilometry)")
-            document.write("<br>")
-            document.write("s (sekundy)<input type=\"text\" id=\"smin\"> -> min (minuty)")
-            document.write("<br>")
-            document.write("min (minuty)<input type=\"text\" id=\"minh\"> -> h (godziny)")
-            document.write("<br>")
-            document.write("<br>")
-            document.write("km (kilometry)<input type=\"text\" id=\"kmm\"> -> m (metry)")
-            document.write("<br>")
-            document.write("h (godziny)<input type=\"text\" id=\"hmin\"> -> min (minuty)")
-            document.write("<br>")
-            document.write("min (minuty)<input type=\"text\" id=\"mins\"> -> s (sekundy)")
-            document.write("<br>")
-            document.write("<button onclick=\"f()\">Przelicz</button>")
-            document.write("<a href=index.html>Wróć do menu</a>")
-            document.write("</center>")
-        }
-
+       <script>
         function f()
-        {
-            document.body.innerHTML = "";
-            document.write("<center>")
-            document.write("" + mkm + " m ->" + Wmkm + " km")
-            document.write("<br>")
-            document.write("" + smin + " s ->" + Wsmin + " min")
-            document.write("<br>")
-            document.write("" + minh + " min ->" + Wminh + " h")
-            document.write("<br>")
-            document.write("" + kmm + " km ->" + Wkmm + " m")
-            document.write("<br>")
-            document.write("" + hmin + " h ->" + Whmin + " min")
-            document.write("<br>")
-            document.write("" + mins + " min ->" + Wmins + " s")
-            document.write("<button onclick=\"s()\">Wróć do kalkulatora</button>")
-            document.write("<a href=index.html>Wróć do menu</a>")
-            document.write("</center>")
-        }
-
-        function zm()
         {
             var mkm = document.getElementById("mkm").value;
             var Wmkm = mkm * 1000;
@@ -67,9 +22,41 @@
             var hmin = document.getElementById("hmin").value;
             var Whmin = hmin * 60;
             var mins = document.getElementById("mins").value;
-            var Wmins = mins * 60;
-
+            var Wmins = mins * 60;    
+            
+            document.write("<center>")
+            document.write(mkm + " m ->" + Wmkm + " km")
+            document.write("<br>")
+            document.write(smin + " s ->" + Wsmin + " min")
+            document.write("<br>")
+            document.write(minh + " min ->" + Wminh + " h")
+            document.write("<br>")
+            document.write(kmm + " km ->" + Wkmm + " m")
+            document.write("<br>")
+            document.write(hmin + " h ->" + Whmin + " min")
+            document.write("<br>")
+            document.write(mins + " min ->" + Wmins + " s")
+            document.write("<a href=index.html>Wróć do menu</a>")
+            document.write("</center>")   
         }
     </script>
+   
+<center>
+    m (metry)<input type="text" id="mkm"> -> km (kilometry)
+    <br>
+    s (sekundy)<input type="text" id="smin"> -> min (minuty)
+    <br>
+    min (minuty)<input type="text" id="minh"> -> h (godziny)
+    <br>
+    <br>
+    km (kilometry)<input type="text" id="kmm"> -> m (metry)
+    <br>
+    h (godziny)<input type="text" id="hmin"> -> min (minuty)
+    <br>
+    min (minuty)<input type="text" id="mins"> -> s (sekundy)
+    <br>
+    <button onclick="f()">Przelicz</button>
+    <a href=index.html>Wróć do menu</a>
+</center>
 </body>
 </html>
